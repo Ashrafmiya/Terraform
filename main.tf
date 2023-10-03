@@ -6,7 +6,7 @@ required_providers {
   }
 }
 provider "aws" {
-  access_key="var.accesskey"
+  access_key= "var.accesskey"
   secret_key= "var.secretkey"
   region     = "us-east-1"
 }
@@ -15,10 +15,6 @@ resource "aws_instance" "myec2" {
   instance_type = "t2.micro"
   vpc_security_group_ids=[aws_security_group.web-sg.id]
   key_name="tf-key-pair"
-
- 
-
- 
 
 tags={
  Name="web-server"
